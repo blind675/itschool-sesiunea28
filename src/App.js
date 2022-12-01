@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./styles.css";
+import { Navigation, ExtraCmp } from "./components/Navigation";
+import UserClass from "./components/UserClass";
+import User from "./components/User";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ExtraCmp />
+      <Navigation />
+      <UserClass nume={"XAA-12"} varsta={29} />
+      <User nume={"Vasile"} varsta={20} />
+      <User nume={"Ana"} varsta={23} />
+      <User
+        nume={"Ion"}
+        varsta={9999}
+        sex={"masculin"}
+        adresa={{ strada: "principala", oras: "Mare" }}
+        callback={() => {
+          console.log("Salut din callback");
+        }}
+      />
     </div>
   );
 }
