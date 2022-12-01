@@ -16,15 +16,7 @@ function App() {
       {/* Instantiem (cream) componenta User, pasandu-i valorile pentru prop-uri. */}
       <User nume={"Vasile"} varsta={20} />
       <User nume={"Ana"} varsta={23} />
-      <User
-        nume={"Ion"}
-        varsta={9999}
-        sex={"masculin"}
-        adresa={{ strada: "principala", oras: "Mare" }}
-        callback={() => {
-          console.log("Salut din callback");
-        }}
-      />
+      <User nume={"Ion"} varsta={9999} />
       {/* Chiar daca este o clasa, componenta este creata la fel */}
       <UserClass nume={"XAA-12"} varsta={29} />
     </div>
